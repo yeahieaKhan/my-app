@@ -20,8 +20,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  analytic,
+  team,
 }: Readonly<{
   children: React.ReactNode;
+  analytic: React.ReactNode;
+  team: React.ReactNode;
 }>) {
   return (
     <html
@@ -30,7 +34,8 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <Navbar1></Navbar1>
-
+        {analytic}
+        {team}
         {children}
       </body>
     </html>
